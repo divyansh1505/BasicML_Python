@@ -1,0 +1,29 @@
+Defining a model - my_model = Modelname()
+Training a model - my_model.fit(features, target)
+Making Prediction - my_model.predict(data)
+
+How many rows and columns in a data? - data.shape
+What are the names of my variables (columns) - data.columns
+What do first few rows of database contains? - data.head()
+are there missing values in my dataframe?  - data.isnull().sum()
+what are the summary stats of my dataframe? - data.describe()
+
+Prediction target is our output, features are the variable which contribute 
+in our prediction.
+
+If we are making pan cakes, the final rating out of 10 is the prediction target 
+while the ingredients used are the features.
+
+Lets say, y = pancakes.rating
+and pancake_features = ['Floor', 'BP', 'Salt', 'Sugar', 'Milk', 'Butter', 'Eggs', 'Syrup']
+X = pancakes[pancake_features]
+
+VALIDATION.
+
+Dont use the whole data to train the model, take some rows - use it to train the Model 
+(training data) and the rest to validate it (validation data)
+
+mean absolute error = (sum|actual-predicted|)/Total number of observation
+
+The split is based on random number generator. Supplying a numeric value to the random 
+state argument gaurantees we get the same split everytime we run this script 
