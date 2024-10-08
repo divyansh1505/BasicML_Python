@@ -9,6 +9,8 @@ import pandas as pd
 x = [0,1,2,3]
 y = [0,2,4,6]
 
+# could have written x, 2x instead of x and y too in plt.plot
+
 plt.plot(x,y, label='2x', color='yellow', linewidth = 4, marker='.', markersize=20,
         linestyle='--', markeredgecolor="blue")
 

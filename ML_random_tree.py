@@ -9,8 +9,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
 
-lap_filepath = '/home/divyansh1505/Desktop/archive./data.csv'
+lap_filepath = 'data.csv'
 lap_data = pd.read_csv(lap_filepath)
 
 y = lap_data['Price_euros']
@@ -29,3 +30,10 @@ forest_model = RandomForestRegressor(random_state=1)
 forest_model.fit(train_X, train_y)
 laptop_preds = forest_model.predict(val_X)
 print(mean_absolute_error(val_y, laptop_preds))
+
+values = lap_data['Price_euros']
+labels = lap_data['Company']
+
+bars = plt.bar(labels, values)
+
+plt.show()

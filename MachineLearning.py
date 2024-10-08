@@ -31,4 +31,5 @@ laptop_model.fit(X, y)
 # Display some predictions
 print(X.head())
 print(laptop_model.predict(X.head()))
+# mtlb using the features it will predict our prices
 
